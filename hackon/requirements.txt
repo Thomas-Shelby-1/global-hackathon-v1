@@ -1,0 +1,50 @@
+# Web/API
+fastapi==0.115.*
+uvicorn[standard]==0.30.*
+
+# Core utils
+pydantic==2.*
+python-multipart
+orjson
+numpy
+pandas
+rapidfuzz
+scikit-learn
+networkx
+
+# Ingestion & parsing
+pypdf
+PyMuPDF
+beautifulsoup4
+lxml
+markdown
+youtube-transcript-api
+yt-dlp
+
+# OCR (optional)
+pillow
+pytesseract
+pdf2image
+
+# NLP (wide)
+spacy
+keybert
+yake
+# optional transformer pipeline for spaCy if you want NER SOTA later:
+# spacy-transformers
+
+# Embeddings + reranker
+sentence-transformers
+FlagEmbedding   # BGE-M3 + bge-reranker-v2-m3
+
+# Vector index
+hnswlib
+
+# LLM client(s)
+openai          # we'll use this to talk to Ollama's OpenAI-compatible API
+litellm         # optional: easy model routing/aliases incl. Ollama
+
+# Graph DB (optional, for later)
+py2neo
+neo4j
+
