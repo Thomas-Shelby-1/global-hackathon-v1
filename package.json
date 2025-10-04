@@ -17,7 +17,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/actastudios/global-hackathon-v1"
-  }
+    "url": "git+https://github.com/actastudios/global-hackathon-v1.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/actastudios/global-hackathon-v1/issues"
+  },
+  "homepage": "https://github.com/actastudios/global-hackathon-v1#readme"
 }
-
