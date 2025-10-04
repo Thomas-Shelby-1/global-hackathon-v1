@@ -14,12 +14,22 @@ PyMuPDF
 beautifulsoup4
 lxml
 markdown
+youtube-transcript-api
+yt-dlp
 
 pillow
 pytesseract
 pdf2image
 
+spacy
+keybert
+yake
+
 sentence-transformers
 FlagEmbedding
 
 openai
+litellm
+
+py2neo
+neo4j

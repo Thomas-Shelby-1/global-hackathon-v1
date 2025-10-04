@@ -5,20 +5,18 @@ import numpy as np
 from sklearn.neighbors import NearestNeighbors
 
 class SKIndex:
-    def __init__(self, metric: str = "cosine"):
+    def __init__(self, metric="cosine"):
         self.metric = metric
         self.nn = None
         self._count = 0
 
-    def add(self, vectors: np.ndarray, ids=None, n_neighbors: int = 5):
-        # Fit once for now (MVP). For incremental adds, refit with stacked vectors.
+    def add(self, vectors: np.ndarray, ids=None):
         self.nn = NearestNeighbors(metric=self.metric, algorithm="auto")
         self.nn.fit(vectors)
         self._count = vectors.shape[0]
 
-    def search(self, vectors: np.ndarray, k: int = 5):
+    def search(self, vectors: np.ndarray, k=5):
         dists, idx = self.nn.kneighbors(vectors, n_neighbors=min(k, self._count), return_distance=True)
-        # sklearn returns (dists, indices). Our API expects (labels, dists).
         return idx, dists
 
     def save(self, path: str):

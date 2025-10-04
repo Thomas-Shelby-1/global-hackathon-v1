@@ -10,7 +10,7 @@ from backend.preprocess.chunk import chunk_text
 from backend.extract.triples_llm import extract_triples_many
 from backend.graph.build import GraphStore
 from backend.rag.embed import embed_texts
-from backend.rag.index_hnsw import SKIndex
+from backend.rag.index_sklearn  import SKIndex
 
 app = FastAPI(title="hackon")
 app.add_middleware(
